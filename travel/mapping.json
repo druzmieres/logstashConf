@@ -1,0 +1,94 @@
+{
+  "template": "travel",
+  "version": 1,
+  "settings": {},
+  "mappings": {
+    "_default_" : {
+      "properties": {
+        "id" : {
+          "type": "integer" 
+        },
+        "tipodia" : {
+          "type": "integer" 
+        },
+        "factor_expansion" : {
+          "type": "float" 
+        },
+        "n_etapas" : {
+          "type": "integer" 
+        },
+        "tviaje" : {
+          "type": "float" 
+        },
+        "distancia_eucl" : {
+          "type": "float" 
+        },
+        "distancia_ruta" : {
+          "type": "float" 
+        },
+        "tiempo_subida" : {
+          "type": "date",
+          "format": "epoch_millis"
+        },
+        "tiempo_bajada" : {
+          "type": "date",
+          "format": "epoch_millis" 
+        },
+        "mediahora_subida" : {
+          "type": "keyword" 
+        },
+        "mediahora_bajada" : {
+          "type": "keyword" 
+        },
+        "periodo_subida" : {
+          "type": "integer" 
+        },
+        "periodo_bajada" : {
+          "type": "integer" 
+        },
+        "tipo_transporte_1" : {
+          "type": "integer" 
+        },
+        "tipo_transporte_2" : {
+          "type": "integer" 
+        },
+        "tipo_transporte_3" : {
+          "type": "integer" 
+        },
+        "tipo_transporte_4" : {
+          "type": "integer" 
+        },
+        "srv_1" : {
+          "type": "keyword" 
+        },
+        "srv_2" : {
+          "type": "keyword" 
+        },
+        "srv_3" : {
+          "type": "keyword" 
+        },
+        "srv_4" : {
+          "type": "keyword" 
+        },
+        "paradero_subida" : {
+          "type": "keyword" 
+        },
+        "paradero_bajada" : {
+          "type": "keyword" 
+        },
+        "comuna_subida" : {
+          "type": "keyword" 
+        },
+        "comuna_bajada" : {
+          "type": "keyword" 
+        },
+        "zona_subida" : {
+          "type": "integer" 
+        },
+        "zona_bajada" : {
+          "type": "integer" 
+        }
+      }
+    }
+  }
+}
