@@ -1,0 +1,70 @@
+{
+  "template": "profile*",
+  "version": 1,
+  "settings": {
+    "max_result_window": 15000
+  },
+  "mappings": {
+    "*": {
+      "properties": {
+        "fulfillment" : { 
+          "type": "keyword"
+        },
+        "route": {
+          "type": "keyword"
+        },
+        "busCapacity" : { 
+          "type": "integer"
+        },
+        "licensePlate": { 
+          "type": "keyword"
+        },
+        "authStopCode" : { 
+          "type": "keyword"
+        },
+        "userStopCode": {
+          "type": "keyword"
+        },
+        "userStopName": { 
+          "type": "text"
+        },
+        "expeditionStartTime": { 
+          "type": "date"
+        },
+        "expeditionEndTime": { 
+          "type": "date"
+        },
+        "expeditionStopOrder": {
+          "type": "integer"
+        },
+        "expeditionDayId" : { 
+          "type": "integer"
+        },
+        "stopDistanceFromPathStart" : { 
+          "type": "half_float"
+        },
+        "expandedGetIn" : { 
+          "type": "half_float"
+        },
+        "expandedLanding": { 
+          "type": "half_float"
+        },
+        "loadProfile" : { 
+          "type": "half_float"
+        },
+        "expeditionStopTime" : { 
+          "type": "date"
+        },
+        "timePeriodInStartTime": {
+          "type": "keyword"
+        },
+        "timePeriodInStopTime": {
+          "type": "keyword"
+        },
+        "dayType": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
