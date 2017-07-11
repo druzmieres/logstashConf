@@ -35,10 +35,10 @@
           "format": "epoch_millis" 
         },
         "mediahora_subida" : {
-          "type": "keyword" 
+          "type": "integer" 
         },
         "mediahora_bajada" : {
-          "type": "keyword" 
+          "type": "integer" 
         },
         "periodo_subida" : {
           "type": "integer" 
@@ -77,10 +77,10 @@
           "type": "keyword" 
         },
         "comuna_subida" : {
-          "type": "keyword" 
+          "type": "integer" 
         },
         "comuna_bajada" : {
-          "type": "keyword" 
+          "type": "integer" 
         },
         "zona_subida" : {
           "type": "integer" 
