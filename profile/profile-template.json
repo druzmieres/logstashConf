@@ -7,14 +7,8 @@
   "mappings": {
     "*": {
       "properties": {
-        "fulfillment" : { 
-          "type": "keyword"
-        },
         "route": {
           "type": "keyword"
-        },
-        "busCapacity" : { 
-          "type": "integer"
         },
         "licensePlate": { 
           "type": "keyword"
@@ -34,6 +28,9 @@
         "expeditionEndTime": { 
           "type": "date"
         },
+        "fulfillment" : { 
+          "type": "keyword"
+        },
         "expeditionStopOrder": {
           "type": "integer"
         },
@@ -43,17 +40,21 @@
         "stopDistanceFromPathStart" : { 
           "type": "half_float"
         },
-        "expandedGetIn" : { 
+        "expandedBoarding" : { 
           "type": "half_float"
         },
-        "expandedLanding": { 
+        "expandedAlighting": { 
           "type": "half_float"
         },
-        "loadProfile" : { 
+        "loadProfile": { 
           "type": "half_float"
+        },
+        "busCapacity" : { 
+          "type": "integer"
         },
         "expeditionStopTime" : { 
-          "type": "date"
+          "type": "date",
+          "null_value": "0"
         },
         "timePeriodInStartTime": {
           "type": "keyword"
@@ -63,6 +64,9 @@
         },
         "dayType": {
           "type": "keyword"
+        },
+        "busStation": {
+          "type": "boolean"
         }
       }
     }
