@@ -1,0 +1,31 @@
+{
+  "template": "expedition*",
+  "version": 1,
+  "settings": {
+    "max_result_window": 10000
+  },
+  "mappings": {
+    "*": {
+      "properties": {
+        "route": {
+          "type": "keyword"
+        },
+        "licensePlate": { 
+          "type": "keyword"
+        },
+        "expeditionStartTime": { 
+          "type": "date"
+        },
+        "expeditionEndTime": { 
+          "type": "date"
+        },
+        "fulfillment" : { 
+          "type": "keyword"
+        },
+        "periodId" : { 
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
