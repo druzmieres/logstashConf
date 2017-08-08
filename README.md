@@ -9,3 +9,4 @@ This repo maintains the logstash config files to upload datasets to elastic sear
 - `speed` : elasticsearch mapping file and logstash configuration file for speed data.
 - `shape` : elasticsearch mapping file and logstash configuration file for route shape data.
 - `general` : elasticsearch mapping file and logstash configuration file for general data per day.
+- `expedition` : elasticsearch mapping file and logstash configuration file for expedition data per day.
