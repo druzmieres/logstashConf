@@ -2,7 +2,25 @@
   "template": "profile*",
   "version": 1,
   "settings": {
-    "max_result_window": 15000
+    "max_result_window": 15000,
+    "index": {
+      "analysis" : {
+        "analyzer" : {
+          "autocomplete_analyzer" : {
+            "type" : "custom",
+            "tokenizer" : "lowercase",
+            "filter"    : ["asciifolding", "title_ngram"]
+          }
+        },
+        "filter" : {
+          "title_ngram" : {
+            "type" : "nGram",
+            "min_gram" : 3,
+            "max_gram" : 5
+          }
+        }
+      }
+    }
   },
   "mappings": {
     "*": {
@@ -14,13 +32,16 @@
           "type": "keyword"
         },
         "authStopCode" : { 
-          "type": "keyword"
+          "type": "text",
+          "analyzer": "autocomplete_analyzer"
         },
         "userStopCode": {
-          "type": "keyword"
+          "type": "text",
+          "analyzer": "autocomplete_analyzer"
         },
         "userStopName": { 
-          "type": "text"
+          "type": "text",
+          "analyzer": "autocomplete_analyzer"
         },
         "expeditionStartTime": { 
           "type": "date"
