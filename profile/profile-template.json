@@ -5,18 +5,23 @@
     "max_result_window": 15000,
     "index": {
       "analysis" : {
-        "analyzer" : {
-          "autocomplete_analyzer" : {
-            "type" : "custom",
-            "tokenizer" : "lowercase",
-            "filter"    : ["asciifolding", "title_ngram"]
+        "analyzer": {
+          "autocomplete_analyzer": {
+            "type": "custom",
+            "tokenizer": "lowercase",
+            "filter": ["asciifolding", "title_ngram"]
+          },
+          "autocomplete_analyzer_for_code": {
+            "type": "custom",
+            "tokenizer": "whitespace",
+            "filter": ["lowercase", "asciifolding", "title_ngram"]
           }
         },
-        "filter" : {
-          "title_ngram" : {
-            "type" : "nGram",
-            "min_gram" : 3,
-            "max_gram" : 5
+        "filter": {
+          "title_ngram": {
+            "type": "nGram",
+            "min_gram": 3,
+            "max_gram": 5
           }
         }
       }
@@ -33,15 +38,30 @@
         },
         "authStopCode" : { 
           "type": "text",
-          "analyzer": "autocomplete_analyzer"
+          "analyzer": "autocomplete_analyzer_for_code",
+          "fields": {
+            "raw": {
+              "type": "keyword"
+            }
+          }
         },
         "userStopCode": {
           "type": "text",
-          "analyzer": "autocomplete_analyzer"
+          "analyzer": "autocomplete_analyzer_for_code",
+          "fields": {
+            "raw": {
+              "type": "keyword"
+            }
+          }
         },
         "userStopName": { 
           "type": "text",
-          "analyzer": "autocomplete_analyzer"
+          "analyzer": "autocomplete_analyzer",
+          "fields": {
+            "raw": {
+              "type": "keyword"
+            }
+          }
         },
         "expeditionStartTime": { 
           "type": "date"
