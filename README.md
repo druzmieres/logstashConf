@@ -10,3 +10,4 @@ This repo maintains the logstash config files to upload datasets to elastic sear
 - `shape` : elasticsearch mapping file and logstash configuration file for route shape data.
 - `general` : elasticsearch mapping file and logstash configuration file for general data per day.
 - `expedition` : elasticsearch mapping file and logstash configuration file for expedition data per day.
+- `odbyroute` : elasticsearch mapping file and logstash configuration file for origin-destination per route.
