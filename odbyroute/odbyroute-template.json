@@ -7,9 +7,6 @@
   "mappings": {
     "*": {
       "properties": {
-#        "date": {
-#          "type": "date"
-#        },
         "operator": { 
           "type": "integer"
         },
